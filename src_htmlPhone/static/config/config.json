@@ -1,5 +1,5 @@
 {
-  "reseau": "Gannon",
+  "reseau": "MidCell",
   "warningMessageCount": 250,
   "themeColor": "#303f9f",
   "colors": [
@@ -24,7 +24,7 @@
 
   "useFormatNumberFrance": false,
 
-  "useWebRTCVocal": true,
+  "useWebRTCVocal": false,
   "RTCConfig": {
     "iceServers": [{
       "urls": ["turn:gannon.ovh"],
@@ -64,14 +64,14 @@
       "icon": "/html/static/img/icons_app/bank.png",
       "subMenu": [
         {
-          "title": "Envoyer un message",
+          "title": "Send a message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "police"
           }
         },
         {
-          "title": "Appeler le standard",
+          "title": "Call emergency number",
           "eventName": "gcphone:autoCallNumber",
           "type": {
             "number": "911"
@@ -84,7 +84,7 @@
       "backgroundColor": "red",
       "subMenu": [
         {
-          "title": "Envoyer un message",
+          "title": "Send a message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "ambulance"
@@ -96,7 +96,7 @@
 
   "apps": [
     {
-      "name": "Téléphone",
+      "name": "Phone",
       "icons": "/html/static/img/icons_app/call.png",
       "routeName": "appels",
       "inHomePage": true
@@ -115,7 +115,7 @@
       "inHomePage": true
     },
     {
-      "name": "Paramètres",
+      "name": "Settings",
       "icons": "/html/static/img/icons_app/settings.png",
       "routeName": "parametre",
       "inHomePage": true
@@ -127,7 +127,7 @@
       "inHomePage": false
     },
     {
-      "name": "Bourse",
+      "name": "Stocks",
       "icons": "/html/static/img/icons_app/bourse.png",
       "routeName": "bourse",
       "enabled": true
@@ -141,11 +141,6 @@
       "name": "Dark Chat",
       "icons": "/html/static/img/icons_app/tchat.png",
       "routeName": "tchat"
-    },
-    {
-      "name": "9GAG",
-      "icons": "/html/static/img/icons_app/9gag.png",
-      "routeName": "9gag"
     }
   ]
 }

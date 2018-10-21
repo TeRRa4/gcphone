@@ -1,6 +1,6 @@
 ### [Downloads page](https://github.com/N3MTV/gcphone/releases)
 
-<h2 align="center">Téléphone pour FiveM</h2>
+<h2 align="center">Phone for FiveM</h2>
 
 ![Image of gcphone1](https://i.imgur.com/naTiBgI.png)
 ![Image of gcphone2](https://i.imgur.com/LAicovK.png)
@@ -10,30 +10,29 @@
 
 
 ## Fonctionalitées
-  - List des conctacts
-  - Envoie de sms
-  - Appel vocal
-  - Appel anonyme
-  - Application Banque
-  - Application Tchat anonyme
-  - Application Bourse
-  - Coque / Fond ecran customisable
-  - . . .
+  - Contact list
+  - Send
+  - Voice calls
+  - Anonymous calls
+  - Bank Application
+  - Anonymous chat applications
+  - Stock exchange applications
+  - Phone and background options
 
 
 ## Configuration
 
 
-### Modifier le fichier /html/static/config/config.json
+### Edit file /html/static/config/config.json
 ```json
 {
-  "//": "Nom du reseau situé dans bare du téléphone",
+  "//": "Phone network name",
   "reseau": "Gannon",
   
-  "//": "Couleur de base du téléphone",
+  "//": "Main color of the phone",
   "themeColor": "#303f9f",
 
-  "//": "List des couleurs pour les conctacts",
+  "//": "List of colours for the contacts",
   "colors": [
     "#EF5350",
     "#EC407A",
@@ -54,14 +53,14 @@
     "#78909C"
   ],
 
-  "//": "Si false, Ajoute un '-' dans le numero (###-####)",
+  "//": "If false, add a dash '-' in the number (###-####)",
   "useFormatNumberFrance": false,
 
-  "//": "useWebRTCVocal: false => Appels avec channels de GTA",
-  "//": "useWebRTCVocal: true  => Appels avec WebRTC",
+  "//": "useWebRTCVocal: false => Calls with GTA channels",
+  "//": "useWebRTCVocal: true  => Calls using WebRTC",
   "useWebRTCVocal": true,
 
-  "//": "Configuration des serveurs TURN à utilisé",
+  "//": "TURN server config",
   "RTCConfig": {
     "iceServers": [{
       "urls": ["turn:gannon.ovh"],
@@ -71,61 +70,61 @@
   },
 
 
-  "//": "List des fonds d'ecran disponible, location => /html/static/img/background",
+  "//": "List of wallpapers available, location => /html/static/img/background",
   "background" : {
     "Calvin & Hobbes": "back001.jpg",
     "Destiny": "back002.jpg",
     "Stormtrooper": "back003.jpg",
     "Custom URL": "URL"
   },
-  "//": "Fonds d'ecran par default",
+  "//": "Default Wallpaper",
   "background_default": {
     "label": "Calvin & Hobbes",
     "value": "back001.jpg"
   },
 
-  "//": "List des coque disponible, location => /html/static/img/coque",
+  "//": "List of available phones, location => /html/static/img/coque",
   "coque": {
     "Sansumg S8": "s8.png",
     "Iphone X": "iphonex.png",
     "Brick Base": "base.png",
     "Transparent": "transparent.png"
   },
-  "//": "Coque par default",
+  "//": "Default phone",
   "coque_default": {
     "label": "Sansumg S8",
     "value": "s8.png"
   },
 
-  "//": "Configuration des appels service (Favorie)",
+  "//": "Service call config",
   "serviceCall": [
     {
 
-      "//": "Nom de l'item",
+      "//": "Item name",
       "display": "Police",
 
-      "//": "Optionnel: Couleur de puce",
+      "//": "Optional: colour to use",
       "backgroundColor": "red",
 
-      "//": "Optionnel: Image de la puce",
+      "//": "Optional: image to use",
       "icon": "/html/static/img/icons_app/bank.png",
 
-      "//": "List des actions disponible",
+      "//": "List of possible actions",
       "subMenu": [
         {
-          "//": "Titre de l'action",
-          "title": "Envoyer un message",
+          "//": "Title of the action",
+          "title": "Send a message",
 
-          "//": "Nom de l'event trigger à l'utilisation",
+          "//": "Name of the event trigger when in use",
           "eventName": "esx_addons_gcphone:call",
 
-          "//": "Optionnel: Parametre 'data' envoyé avec l'event",
+          "//": "Optional: Parameter 'data' sent with the event",
           "type": {
             "number": "police"
           }
         },
         {
-          "title": "Appeler le standard",
+          "title": "Call the standard",
           "eventName": "gcphone:autoCallNumber",
           "type": {
             "number": "911"
@@ -138,7 +137,7 @@
       "backgroundColor": "red",
       "subMenu": [
         {
-          "title": "Envoyer un message",
+          "title": "Send a message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "ambulance"
@@ -148,22 +147,22 @@
     }
   ],
 
-  "//": "Configuration des applications",
+  "//": "Application configs",
   "apps": [
     {
-      "//": "Nom de l'application",
-      "name": "Téléphone",
+      "//": "Name of app",
+      "name": "Phone",
 
-      "//": "Icons de l'application",
+      "//": "App icon",
       "icons": "/html/static/img/icons_app/call.png",
 
-      "//": "Route de l'application, NE PAS MODIFIER",
+      "//": "Route of the application, DO NOT MODIFY",
       "routeName": "appels",
 
-      "//": "Si true, l'application serra disponible sur la home page",
+      "//": "If true, the application will be available on the home page",
       "inHomePage": true,
 
-      "//": "Si false, l'application n'est pas visible",
+      "//": "If false, app is not visible",
       "enabled": true
     },
     {
@@ -172,7 +171,7 @@
       "routeName": "messages",
       "inHomePage": true,
 
-      "//": "Référence au store, pour affiche un puce sous l'icone de l'app",
+      "//": "Reference to the store, to display a chip under the icon of the app",
       "puceRef": "nbMessagesUnread",
     },
     {
@@ -182,7 +181,7 @@
       "inHomePage": true
     },
     {
-      "name": "Paramètres",
+      "name": "Settings",
       "icons": "/html/static/img/icons_app/settings.png",
       "routeName": "parametre",
       "inHomePage": true
@@ -194,7 +193,7 @@
       "inHomePage": false
     },
     {
-      "name": "Bourse",
+      "name": "Stocks",
       "icons": "/html/static/img/icons_app/bourse.png",
       "routeName": "bourse",
       "enabled": true
@@ -213,24 +212,24 @@
 }
 
 ```
-*N'oublier pas de rajoute les nouveaux fichier dans le __ressource.lua*
+*Do not forget to add the new files in __ressource.lua*
 
 
-* Vous pouvez modifier les sons dans \html\static\sound
-* Les coques doivent etre de 1000x500 px, La zone ecran est center de taille 800*400
-* Les application Banque & Bourse sont à configuré selon vos script
+* You can edit the sounds in \ html \ static \ sound
+* The shells must be 1000x500 px, The screen area is center size 800 * 400
+* Bank & Exchange applications are configured according to your script
 
-### Les poste fixe sont configurable dans gcphone/config.lua
+### Fixed extensions are configurable in gcphone / config.lua
 ```LUA
 --[[
-  Faite attention à ne pas utilisé un numéro qui entre en conflic avec un joueur
+  Be careful not to use a number that conflicts with a player
 --]]
 FixePhone = {
-  -- Poste de police
+  -- Police station
   ['911'] = { name =  "Central Police", coords = { x = 441.2, y = -979.7, z = 30.58 } },
   
-  -- Cabine proche du poste de police
-  ['008-0001'] = { name = "Cabine Telephonique", coords = { x = 372.25, y = -965.75, z = 28.58 } },
+  -- Cabin near the police station
+  ['008-0001'] = { name = "Phone Box", coords = { x = 372.25, y = -965.75, z = 28.58 } },
 }
 ```
 

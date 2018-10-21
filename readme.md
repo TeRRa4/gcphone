@@ -9,7 +9,7 @@
 ![Image of gcphone5](https://i.imgur.com/9h7eiI8.png)
 
 
-## Fonctionalitées
+## Features
   - Contact list
   - Send
   - Voice calls
